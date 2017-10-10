@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Animal } from './animal';
+
 
 @Component({
   selector: 'app-animal-list',
@@ -46,9 +48,13 @@ export class AnimalListComponent implements OnInit {
 
 	];
 	
-  
+  removeAnimal(index) {
+	  return this.animals.splice(index, 1);
+  }
 
   ngOnInit() {
+
+	  // console.log(this.animals);
   }
 
 }
