@@ -19,3 +19,12 @@
 		<hr>
 	</li>
 </ul>
+
+
+<ul>
+	<li *ngFor="let animal of animals; let index = index">
+		 
+		<button (click) = "listOfAnimals(animal.sector)">List Of Animals from {{ animal.sector }}</button>
+		<hr>
+	</li>
+</ul>

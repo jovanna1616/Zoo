@@ -15,9 +15,9 @@ export class AnimalListComponent implements OnInit {
 		'sector1', 'sector2', 'sector3'
 	];
 
-	animals: Array<Object> = [];
+	animals: Array<Animal> = [];
 
-	newAnimal: Object = new Animal('', '', '', '');
+	newAnimal: Animal = new Animal('', '', '', '');
 	
   
   	addAnimal() {
@@ -37,9 +37,19 @@ export class AnimalListComponent implements OnInit {
 		this.animals.splice(toIndex, 0, element);
 	}
 
+	listOfAnimals(sector) {
+		for (var i = 0; i < this.animals.length;i++){
+
+			if(this.animals[i].sector == sector){
+				alert(this.animals[i].name);
+			}
+
+		}
+		
+	}
+
   ngOnInit() {
 
-	  // console.log(this.animals);
   }
 
 }
