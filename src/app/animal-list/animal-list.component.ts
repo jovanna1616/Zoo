@@ -21,8 +21,8 @@ export class AnimalListComponent implements OnInit {
 	
   
   	addAnimal() {
-		this.animals.push(this.newAnimal);
-		this.newAnimal = new Animal('', '', '', '');
+			this.animals.push(this.newAnimal);
+			this.newAnimal = new Animal('', '', '', '');
   	}
 
 	removeAnimal(index) {
@@ -30,17 +30,16 @@ export class AnimalListComponent implements OnInit {
 	}
 
 
-	moveToTop(index, toIndex) {
-		var toIndex: any = this.animals[0];
-		var element = this.animals[index];
+	moveToTop(index: number) {
+		const element = this.animals[index];
 		this.animals.splice(index, 1);
-		this.animals.splice(toIndex, 0, element);
+		this.animals.splice(0, 0, element);
 	}
 
 	listOfAnimals(sector) {
-		for (var i = 0; i < this.animals.length;i++){
+		for (let i = 0; i < this.animals.length; i++){
 
-			if(this.animals[i].sector == sector){
+			if(this.animals[i].sector === sector){
 				alert(this.animals[i].name);
 			}
 
