@@ -23,6 +23,14 @@ export class AnimalListComponent implements OnInit {
 	  return this.animals.splice(index, 1);
   }
 
+
+  moveToTop(index, toIndex) {
+	  var toIndex:any = this.animals[0];
+	  var element = this.animals[index];
+	  this.animals.splice(index, 1);
+	  this.animals.splice(toIndex, 0, element);
+}
+
   ngOnInit() {
 
 	  // console.log(this.animals);

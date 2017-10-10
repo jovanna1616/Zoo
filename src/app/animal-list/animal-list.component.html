@@ -2,8 +2,9 @@
 	<li *ngFor="let animal of animals; let index = index">
 		animal species: {{ animal.species }}, 
 		animal name: {{ animal.name }}, 
-		birth: {{ animal.birth? animal.birth : "unknown" }}
+		birth: {{ animal.birth? animal.birth : "unknown" }},
 		<button (click) = "removeAnimal(index)">Remove animal</button>
+		<button (click) = "moveToTop(index)">move animal to top of list</button>
 		<hr>
 	</li>
 </ul>
