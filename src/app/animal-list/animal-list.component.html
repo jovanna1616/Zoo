@@ -1,6 +1,11 @@
+<label>Animal species: </label><br>
 <input type="text" name="species" [(ngModel)]="newAnimal.species"><br>
+<label>Animal name: </label><br>
 <input type="text" name="name" [(ngModel)]="newAnimal.name"><br>
+<label>Animal birth: </label><br>
 <input type="text" name="birth" [(ngModel)]="newAnimal.birth"><br>
+<label>Animal sector: </label><br>
+<input type="text" name="sector" [(ngModel)]="newAnimal.sector"><br>
 <button (click)="addAnimal()">Add new animal</button>
 
 <ul>
@@ -8,6 +13,7 @@
 		animal species: {{ animal.species }}, 
 		animal name: {{ animal.name }}, 
 		birth: {{ animal.birth? animal.birth : "unknown" }},
+		sector: {{ animal.sector }},
 		<button (click) = "removeAnimal(index)">Remove animal</button>
 		<button (click) = "moveToTop(index)">move animal to top of list</button>
 		<hr>

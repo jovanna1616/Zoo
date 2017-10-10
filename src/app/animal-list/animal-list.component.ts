@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from './animal';
+import { Sector } from './sector';
 
 
 @Component({
@@ -9,14 +10,19 @@ import { Animal } from './animal';
 })
 export class AnimalListComponent implements OnInit {
 
+	sectors: Array<Object> = 
+	[
+		'sector1', 'sector2', 'sector3'
+	];
+
 	animals: Array<Object> = [];
 
-	newAnimal: Object = new Animal('', '', '');
+	newAnimal: Object = new Animal('', '', '', '');
 	
   
   	addAnimal() {
 		this.animals.push(this.newAnimal);
-		this.newAnimal = new Animal('', '', '');
+		this.newAnimal = new Animal('', '', '', '');
   	}
 
 	removeAnimal(index) {
