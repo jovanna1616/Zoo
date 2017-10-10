@@ -15,28 +15,32 @@ export class AnimalListComponent implements OnInit {
 			birth: '01-01-2016'
 
 		},
+
 		{
 			species: 'dog',
 			name: 'Bully',
 			birth: '01-01-2015'
 
 		},
+
 		{
 			species: 'snake',
 			name: 'Python',
 			birth: '01-01-2016'
 
 		},
+
 		{
 			species: 'bear',
 			name: 'Teddy',
 			birth: '01-01-2015'
 
 		},
+
 		{
 			species: 'monkey',
 			name: 'Tom',
-			birth: '01-01-2016'
+			birth: ''
 
 		},
 

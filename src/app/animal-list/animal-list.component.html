@@ -2,7 +2,7 @@
 	<li *ngFor="let animal of animals">
 		animal species: {{ animal.species }}, 
 		animal name: {{ animal.name }}, 
-		birth: {{ animal.birth }}
+		birth: {{ animal.birth? animal.birth : "unknown" }}
 		<hr>
 	</li>
 </ul>
