@@ -1,3 +1,8 @@
+<input type="text" name="species" [(ngModel)]="newAnimal.species"><br>
+<input type="text" name="name" [(ngModel)]="newAnimal.name"><br>
+<input type="text" name="birth" [(ngModel)]="newAnimal.birth"><br>
+<button (click)="addAnimal()">Add new animal</button>
+
 <ul>
 	<li *ngFor="let animal of animals; let index = index">
 		animal species: {{ animal.species }}, 
